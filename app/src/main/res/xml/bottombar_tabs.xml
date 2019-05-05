@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        id="@+id/tab_order"
+        icon="@drawable/bg_order"
+        title="预约"
+        barColorWhenSelected="#5D4037" />
+    <tab
+        id="@+id/tab_square"
+        icon="@drawable/bg_square"
+        title="资讯"
+        barColorWhenSelected="#5D4037" />
+    <tab
+        id="@+id/tab_friends"
+        icon="@drawable/bg_mine"
+        title="我的"
+        barColorWhenSelected="#5D4037" />
+</tabs>
