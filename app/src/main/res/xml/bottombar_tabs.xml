@@ -2,17 +2,17 @@
 <tabs>
     <tab
         id="@+id/tab_order"
-        icon="@drawable/bg_order"
+        icon="@drawable/ic_assignment_black_24dp"
         title="预约"
         barColorWhenSelected="@color/white" />
     <tab
         id="@+id/tab_square"
-        icon="@drawable/bg_square"
+        icon="@drawable/ic_camera_black_24dp"
         title="资讯"
         barColorWhenSelected="@color/white" />
     <tab
-        id="@+id/tab_friends"
-        icon="@drawable/bg_mine"
+        id="@+id/tab_mine"
+        icon="@drawable/ic_person_black_24dp"
         title="我的"
         barColorWhenSelected="@color/white" />
 </tabs>

@@ -1,7 +1,6 @@
-package com.paopao.carClean.activity.base
+package com.paopao.carClean.ui.activity.base
 
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.support.v7.app.AppCompatActivity
 import com.paopao.carClean.views.MyDialogProgress
 import io.reactivex.disposables.CompositeDisposable
