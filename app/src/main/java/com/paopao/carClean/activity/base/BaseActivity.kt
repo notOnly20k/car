@@ -15,8 +15,9 @@ public abstract class BaseActivity : AppCompatActivity() {
     protected abstract val contentViewResId: Int
 
 
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
-        super.onCreate(savedInstanceState, persistentState)
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
         setContentView(contentViewResId)
         mCompositeDisposable = CompositeDisposable()
         progress = MyDialogProgress(this)
