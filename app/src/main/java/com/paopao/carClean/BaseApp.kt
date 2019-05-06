@@ -7,6 +7,7 @@ import com.fasterxml.jackson.databind.DeserializationFeature
 import com.fasterxml.jackson.databind.MapperFeature
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.datatype.jsonorg.JsonOrgModule
+import com.paopao.carClean.util.DBService
 import org.slf4j.LoggerFactory
 
 
@@ -16,12 +17,14 @@ import org.slf4j.LoggerFactory
 class BaseApp : Application(), AppComponent {
     override lateinit var objectMapper: ObjectMapper
     override lateinit var preference: Preference
+    override lateinit var dbService: DBService
 
 
     override fun onCreate() {
         super.onCreate()
         instance = this
         Fresco.initialize(this)
+        dbService= DBService.dbService!!
         preference =  AppPreference(this, PreferenceManager.getDefaultSharedPreferences(this), this)
         objectMapper = ObjectMapper().apply {
             registerModule(JsonOrgModule())

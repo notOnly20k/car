@@ -2,6 +2,7 @@ package com.paopao.carClean
 
 
 import com.fasterxml.jackson.databind.ObjectMapper
+import com.paopao.carClean.util.DBService
 import io.reactivex.subjects.BehaviorSubject
 
 /**
@@ -10,4 +11,5 @@ import io.reactivex.subjects.BehaviorSubject
 interface  AppComponent{
     val preference: Preference
     val objectMapper: ObjectMapper
+    val dbService: DBService
 }
