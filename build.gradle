@@ -8,9 +8,10 @@ buildscript {
     ext.support_library_version = '27.0.1'
     ext.min_sdk_version = 16
     repositories {
+        maven { url 'https://jitpack.io' }//添加jitpack仓库地址
+        maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
         google()
         jcenter()
-        maven { url 'https://jitpack.io' }//添加jitpack仓库地址
     }
     dependencies {
         classpath "com.android.tools.build:gradle:$android_gradle_version"
@@ -25,6 +26,8 @@ allprojects {
     repositories {
         google()
         jcenter()
+        maven { url 'https://jitpack.io' }//添加jitpack仓库地址
+        maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
     }
 }
 

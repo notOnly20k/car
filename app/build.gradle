@@ -20,26 +20,31 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    api 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     testImplementation 'junit:junit:4.12'
 
-    api 'io.reactivex.rxjava2:rxjava:2.1.1'
-    api 'io.reactivex.rxjava2:rxkotlin:2.1.0'
-    api 'io.reactivex.rxjava2:rxandroid:2.0.1'
-    api 'org.slf4j:slf4j-api:1.7.21'
-    implementation 'com.github.tony19:logback-android-core:1.1.1-6'
-    implementation('com.github.tony19:logback-android-classic:1.1.1-6') {
-        // workaround issue #73
-        exclude group: 'com.google.android', module: 'android'
-    }
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.1'
+    implementation 'io.reactivex.rxjava2:rxkotlin:2.1.0'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+//    api 'org.slf4j:slf4j-api:1.7.21'
+//    implementation 'com.github.tony19:logback-android-core:1.1.1-6'
+//    implementation('com.github.tony19:logback-android-classic:1.1.1-6') {
+//        // workaround issue #73
+//        exclude group: 'com.google.android', module: 'android'
+//    }
+
+    compile 'com.facebook.fresco:fresco:1.8.0'
+
+    compile 'org.slf4j:slf4j-api:1.7.25'
+    compile 'com.github.tony19:logback-android:2.0.0'
 
     compile 'com.roughike:bottom-bar:2.3.1'
 
-    api "com.android.support:appcompat-v7:$support_library_version"
+    implementation "com.android.support:appcompat-v7:$support_library_version"
     implementation "com.android.support:preference-v7:$support_library_version"
     implementation "com.android.support:preference-v14:$support_library_version"
-    api "com.android.support:recyclerview-v7:$support_library_version"
-    api "com.android.support:design:$support_library_version"
+    implementation "com.android.support:recyclerview-v7:$support_library_version"
+    implementation "com.android.support:design:$support_library_version"
 
     implementation 'com.fasterxml.jackson.datatype:jackson-datatype-json-org:2.9.0'
 

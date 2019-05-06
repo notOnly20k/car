@@ -2,6 +2,7 @@ package com.paopao.carClean
 
 import android.app.Application
 import android.preference.PreferenceManager
+import com.facebook.drawee.backends.pipeline.Fresco
 import com.fasterxml.jackson.databind.DeserializationFeature
 import com.fasterxml.jackson.databind.MapperFeature
 import com.fasterxml.jackson.databind.ObjectMapper
@@ -20,6 +21,7 @@ class BaseApp : Application(), AppComponent {
     override fun onCreate() {
         super.onCreate()
         instance = this
+        Fresco.initialize(this)
         preference =  AppPreference(this, PreferenceManager.getDefaultSharedPreferences(this), this)
         objectMapper = ObjectMapper().apply {
             registerModule(JsonOrgModule())
