@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#f1f1f1"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/iv_head"
+        android:layout_width="93dp"
+        android:layout_height="93dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        fresco:actualImageScaleType="centerCrop"
+        fresco:placeholderImage="@drawable/head_man"
+        fresco:placeholderImageScaleType="centerCrop"
+        fresco:roundAsCircle="true" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_head"
+        android:background="#f1f1f1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="8dp"
+                android:background="@null"
+                android:textColor="@color/textColor"
+                android:gravity="center_vertical"
+                android:hint="姓名" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="8dp"
+                android:background="#f1f1f1" />
+
+            <EditText
+                android:id="@+id/et_account"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="8dp"
+                android:background="@null"
+                android:textColor="@color/textColor"
+                android:gravity="center_vertical"
+                android:hint="账号" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="8dp"
+                android:background="#f1f1f1" />
+
+            <EditText
+                android:id="@+id/et_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="8dp"
+                android:background="@null"
+                android:textColor="@color/textColor"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp"
+                android:hint="密码" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="100dp"
+            android:text="注册"
+            />
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -15,6 +15,8 @@ import java.lang.reflect.Field
 
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
+import org.slf4j.Logger
+import org.slf4j.LoggerFactory
 
 
 /**
@@ -24,6 +26,7 @@ abstract class BaseFragment : Fragment() {
 
     private var dialog: MyDialogProgress? = null
     protected abstract val contentViewLayoutID: Int
+    protected val logger: Logger by lazy { LoggerFactory.getLogger(javaClass.simpleName) }
 
     private var isFirstResume = true
     private var isFirstVisible = true

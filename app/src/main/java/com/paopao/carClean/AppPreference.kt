@@ -5,13 +5,14 @@ import android.content.SharedPreferences
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.paopao.carClean.bean.User
 import java.util.concurrent.atomic.AtomicReference
+import java.util.logging.Logger
 import kotlin.reflect.KProperty
 
 
 class AppPreference(appContext: Context,
                     private val pref: SharedPreferences,
                     private val appComponent: AppComponent) : Preference {
-    override var currentUser: User?? by sharePreference(KEY_CURRENT_USER)
+    override var currentUser: User? by sharePreference(KEY_CURRENT_USER)
 
     private val objectMapper: ObjectMapper
         get() = appComponent.objectMapper
@@ -46,6 +47,11 @@ class AppPreference(appContext: Context,
         }
     }
 
+    override fun clear() {
+        pref.edit()
+                .remove(KEY_CURRENT_USER)
+                .apply()
+    }
     companion object {
         const val KEY_CURRENT_USER = "current_user"
     }

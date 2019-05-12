@@ -1,7 +1,10 @@
 package com.paopao.carClean.ui.base
 
+import android.content.Context
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.view.View
+import android.view.inputmethod.InputMethodManager
 import com.paopao.carClean.views.MyDialogProgress
 import io.reactivex.disposables.CompositeDisposable
 import org.slf4j.Logger
@@ -22,6 +25,11 @@ public abstract class BaseActivity : AppCompatActivity() {
         progress = MyDialogProgress(this)
     }
 
+
+    protected fun hideSoftWindow(v: View) {
+        val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        imm.hideSoftInputFromWindow(v.windowToken, 0)
+    }
 
 
 

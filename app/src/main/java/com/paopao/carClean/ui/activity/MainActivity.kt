@@ -2,6 +2,7 @@ package com.paopao.carClean.ui.activity
 
 import android.os.Bundle
 import com.paopao.carClean.R
+import com.paopao.carClean.bean.User
 import com.paopao.carClean.ui.base.BaseActivity
 import com.paopao.carClean.ui.base.BaseFragment
 import com.paopao.carClean.ui.fragment.MineFragment
@@ -29,7 +30,6 @@ class MainActivity : BaseActivity() {
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.fl_content, mFragmentList[0]).commit()
         bottomBar.setOnTabSelectListener { it->
-            logger.e { it }
             run {
                 when (it) {
                     R.id.tab_order -> {
@@ -45,6 +45,7 @@ class MainActivity : BaseActivity() {
                 changeFragment(currentPosition)
             }
         }
+
     }
 
     private fun changeFragment(currentPosition: Int) {

@@ -21,11 +21,9 @@ class BaseApp : Application(), AppComponent {
 
 
     override fun onCreate() {
-        super.onCreate()
         instance = this
+        super.onCreate()
         Fresco.initialize(this)
-        dbService= DBService.dbService!!
-        preference =  AppPreference(this, PreferenceManager.getDefaultSharedPreferences(this), this)
         objectMapper = ObjectMapper().apply {
             registerModule(JsonOrgModule())
             configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
@@ -33,6 +31,8 @@ class BaseApp : Application(), AppComponent {
             configure(DeserializationFeature.READ_UNKNOWN_ENUM_VALUES_USING_DEFAULT_VALUE, true)
             configure(MapperFeature.ACCEPT_CASE_INSENSITIVE_PROPERTIES, true)
         }
+        dbService= DBService.dbService!!
+        preference =  AppPreference(this, PreferenceManager.getDefaultSharedPreferences(this), this)
 
     }
 

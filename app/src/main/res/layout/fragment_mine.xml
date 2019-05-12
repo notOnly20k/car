@@ -70,6 +70,14 @@
 
     </LinearLayout>
     </LinearLayout>
-
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="200dp"
+       android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/yellow_ffcc00_alpha"
+        android:text="退出登录"
+        android:layout_marginBottom="50dp"
+        android:layout_height="50dp" />
 
 </RelativeLayout>

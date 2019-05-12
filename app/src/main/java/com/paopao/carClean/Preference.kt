@@ -10,4 +10,6 @@ import java.util.*
 interface Preference {
     var currentUser: User?
 
+    fun clear()
+
 }
